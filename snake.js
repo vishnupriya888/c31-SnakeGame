@@ -5,8 +5,8 @@ class Snake {
      this.xdir = 0;               //This defines speed of the snake
      this.ydir = 0;               //This defines speed of the snake
      this.tailCount = 1;          //Store number of boxes in the snake (This has to be 1 initially)
-     this.x =0;                   //Latest X location of Head
-     this.y = 0;                  //Latest Y location of Head
+     this.x =20;                   //Latest X location of Head
+     this.y = 20;                  //Latest Y location of Head
     }
   
     update(){    
@@ -34,20 +34,23 @@ class Snake {
 
     gameOver(){   //Checking if the snake goes out of the gaming Area
       if(this.x > 400 || this.x < 0 || this.y > 400 || this.y < 0){
-        background("Red");
+        background("pink");
+        fill("skyblue")
+        textSize(90);
+        textFont("comic sans ms")
+        text("GAME OVER !!! ",100,220);
         return true;
       }
       else return false;
     }
 
     display(){
-      console.log("Snake Position Length: "+this.snakeXPosition.length);
-      console.log("Tail COunt: "+this.tailCount);
+     
       // drawing the body of the snake
       for(var i= 0;i<this.tailCount;i++){
         var y = this.snakeYPosition[i];
         var x = this.snakeXPosition[i];
-        fill(255);
+        fill("turquoise");
         rect(x,y,20,20);      //Ensure the snake moves in grid of 20 units in a step
       } 
 }

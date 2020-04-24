@@ -2,14 +2,14 @@ var snake;
 var foodX,foodY;
 
 function setup() {
-  createCanvas(400,400);
+  createCanvas(800,400);
   snake = new Snake();
   foodLocation();
   frameRate(3);
 }
 
 function draw() {
-  background(0);  
+  background("skyblue");  
 
   snake.update();
   // new location is generated when the snake eats the food
@@ -17,7 +17,7 @@ function draw() {
     foodLocation();   //Getting location of Food
   }
   snake.display();
-  fill("red");
+  fill("yellow");
   rect(foodX,foodY,20,20);  //Create Food along with location and size
   snake.gameOver();   //Keep checking if Game is Over
 }
