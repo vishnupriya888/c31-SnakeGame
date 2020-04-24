@@ -42,6 +42,6 @@ function keyPressed(){      //Code to control snake's direction
 }
 
 function foodLocation (){       // Getting random location for Food
-  foodX = floor(random(0,20))*20; //Ensuring the food falls in grids of 20 units
+  foodX = floor(random(0,40))*20; //Ensuring the food falls in grids of 20 units
   foodY = floor(random(0,20))*20;
 }
