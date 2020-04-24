@@ -33,7 +33,7 @@ class Snake {
     }
 
     gameOver(){   //Checking if the snake goes out of the gaming Area
-      if(this.x > 400 || this.x < 0 || this.y > 400 || this.y < 0){
+      if(this.x > 800 || this.x < 0 || this.y > 400 || this.y < 0){
         background("pink");
         fill("skyblue")
         textSize(90);
